@@ -1,0 +1,6 @@
+D:/Cmake/test_4/build/CMakeFiles/OLAS.dir
+D:/Cmake/test_4/build/CMakeFiles/edit_cache.dir
+D:/Cmake/test_4/build/CMakeFiles/rebuild_cache.dir
+D:/Cmake/test_4/build/adder/CMakeFiles/adder.dir
+D:/Cmake/test_4/build/adder/CMakeFiles/edit_cache.dir
+D:/Cmake/test_4/build/adder/CMakeFiles/rebuild_cache.dir
