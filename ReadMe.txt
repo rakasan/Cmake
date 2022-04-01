@@ -1,3 +1,5 @@
+Configure and build with CMake
+
 lessons from :
 https://www.youtube.com/watch?v=kEGQKzhciKc&ab_channel=Code%2CTech%2CandTutorials
 
