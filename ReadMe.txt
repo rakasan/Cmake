@@ -12,3 +12,7 @@ make -C ./build #command used to build the system
 ./OLAS #used to run the code
 
 code . #daca esti in cmd / terminal si vrei sa deschizi Vscode
+
+chmod +x configure.sh build.sh run.sh #change permisions
+
+touch configure.sh #create the file
