@@ -1,1 +1,1 @@
-cmake -DGLFW_BUILD_DOCS=OFF -S . -B build -G "MinGW Makefiles"
+cmake -DGLFW_BUILD_DOCS=OFF -DUSE_ADDER=OFF -S . -B build -G "MinGW Makefiles"
