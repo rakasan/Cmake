@@ -18,3 +18,5 @@ code . #daca esti in cmd / terminal si vrei sa deschizi Vscode
 chmod +x configure.sh build.sh run.sh #change permisions
 
 touch configure.sh #create the file
+
+For CPack you need to instal NSIS from source forge
