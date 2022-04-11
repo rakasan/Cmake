@@ -3,24 +3,24 @@ cmake_minimum_required(VERSION 3.23.0)
 project(OLAS VERSION 1.0)
 
 # #Find library 
-find_library(my_glewlib glew NAMES glew2 GLEW GLEW2 glew32  glew32s 
-PATHS 
-    "D:\\Development Libraries\\glew-2.1.0"
-PATH_SUFFIXES 
-    "lib\\Release\\x64"
-    "bin\\Release\\x64"
-DOC 
-    "glew library")
+#find_library(my_glewlib glew NAMES glew2 GLEW GLEW2 glew32  glew32s 
+#PATHS 
+#    "D:\\Development Libraries\\glew-2.1.0"
+#PATH_SUFFIXES 
+#    "lib\\Release\\x64"
+#    "bin\\Release\\x64"
+#DOC 
+#    "glew library")
 
-if(${myglewlib} STREQUAL myglewlib-NOTFOUND)
-    message(FATAL_ERROR "no glew, sad day")
-else()
-    message(STATUS "glew found! as ${myglewlib}")
-    list(APPEND EXTRA_INCLUDE_DIRS "D:\\Development Libraries\\glew-2.1.0\\include")
-    list(APPEND EXTRA_LINKS ${myglewlib})
-    target_link_libraries(${PROJECT_NAME} ${myglewlib})
-    target_link_directories(${PROJECT_NAME} "D:\\Development Libraries\\glew-2.1.0\\include")
-endif()
+#if(${myglewlib} STREQUAL myglewlib-NOTFOUND)
+#    message(FATAL_ERROR "no glew, sad day")
+#else()
+#    message(STATUS "glew found! as ${myglewlib}")
+#    list(APPEND EXTRA_INCLUDE_DIRS "D:\\Development Libraries\\glew-2.1.0\\include")
+#    list(APPEND EXTRA_LINKS ${myglewlib})
+#    target_link_libraries(${PROJECT_NAME} ${myglewlib})
+#    target_link_directories(${PROJECT_NAME} "D:\\Development Libraries\\glew-2.1.0\\include")
+#endif()
 
 #Find library for cmake
 #find_library(myglewlib glew NAMES glew2 GLEW GLEW2 DOC "glew library" ) #you can use the REQUIRED and the if statement is no longer needed
@@ -44,6 +44,14 @@ endif()
 #    message(STATUS "gl found! as ${myglulib}")
 #endif()
 
+
+find_package(GLEW MODULE REQUIRED)
+
+if(GLEW_FOUND)
+    list(APPEND EXTRA_INCLUDE_DIRS ${GLEW_INCLUDE_DIRS})
+    list(APPEND EXTRA_LINKS ${GLEW_LIBRARIES})
+elseif()
+endif()
 
 if(USE_ADDER)
     add_subdirectory(adder)
